@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+    label{
+        margin-bottom: 20px;
+    }
+    input{
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    #fruit{
+      margin-top: 20px;
+        font-size: 20px;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+</style>
+<body>
+    <label for="indexinput">Choose yuor own Index</label>
+    <input id="indexinput" type="number" placeholder="Index">
+    <button onclick="showfruit()">Fruit display</button>
+    <div id="fruit"></div>
+
+    <script>
+        var fruits = ['banana' , 'apple' , 'watermelon' , 'kiwi', 'grape']
+        function showfruit(){
+            var index = document.getElementById("indexinput").value;
+            var fruitdiv = document.getElementById("fruit");
+
+            if(index >=0 && index <fruits.length){
+                fruitdiv.textContent= `your choose fruit ${fruits[index]}`
+            }
+            else {
+                fruitdiv.textContent = "اندکس وارد شده نامعتبر است. لطفاً یک عدد بین 0 تا " + (fruits.length - 1) + " وارد کنید.";
+
+            }
+        }
+    </script>
+</body>
+</html>

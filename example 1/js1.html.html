@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+       font-family: Arial, Helvetica, sans-serif;
+       background: linear-gradient(to left , #68a7eb , #3e3687);
+    }
+    .father{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 100px;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+    }
+    .container{
+        width: 500px;
+        height: 250px;
+        background-color:rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px 2px rgb(0, 60, 255);
+        border-radius: 20px;
+        border: 2px solid rgb(0, 38, 255);
+        
+    }
+    input{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        box-shadow: 0 0 10px 2px rgb(0, 94, 255);
+        border-radius: 20px;
+
+    }
+    button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 10px;
+        padding: 4px;
+    }
+   h3{
+    text-align: center;
+    background-color: #007bff;
+    margin-top: 20px;
+   }
+</style>
+<body>
+   <div class="father">
+    <div class="container">
+        <input id="in1" type="text" placeholder="Enter your name">
+        <button onclick="great()">Click</button>
+        <h3 id="demo"></h3>
+    </div>
+   </div>
+   <h1>This is a <span style="color: rgb(0, 179, 255);">simple</span> Function</h1>
+
+    <script>
+        function great(){
+           var input = document.getElementById("in1").value
+           var result = `Hello ${input}. How are you!`
+           document.getElementById("demo").innerHTML=result
+        }
+    </script>
+</body>
+</html>

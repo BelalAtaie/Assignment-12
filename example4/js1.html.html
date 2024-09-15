@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background: linear-gradient(to right , rgb(0, 187, 255),rgb(112, 178, 216));
+    }
+    .bigdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        min-width: 40%;
+        background-color: rgb(0, 128, 255);
+        padding: 30px;
+        margin: 100px 0;
+        box-sizing: border-box;
+        border: 2px solid white;
+        border-radius: 20px;
+
+    }
+    input{
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 15px 0;
+        text-align: end;
+    }
+    button{
+        display: block;
+        margin: auto;
+        padding: 8px ;
+    }
+    h2{
+        margin-top: 20px;
+        color: white;
+    }
+    h1{
+        text-align: center;
+        margin-top: 50px;
+        color: rgb(255, 255, 255);
+
+    }
+</style>
+<body> 
+    <h1>This function worked by <span style="color: chocolate;">Math.pow()</span></h1>
+    <div class="bigdiv">
+        <div class="container">
+            <input id="in1" type="Number" placeholder="Enter a number !">
+        <br>
+        <button onclick="doubleNumber()">Click for the pow your number!</button>
+        <h2 id="h2">Result = </h2>
+        </div>
+    </div>
+   
+    <script>
+      function doubleNumber(){
+        var int = document.getElementById("in1").value;
+        var pow =Math.pow(int,2);
+
+        document.getElementById('h2').innerHTML= `The pow of  ${int} is ${pow}`
+       
+      }
+    </script>
+</body>
+</html>
